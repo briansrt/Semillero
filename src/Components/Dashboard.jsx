@@ -100,7 +100,7 @@ export default function AiVideoDashboard() {
         <div className="container header-content">
           <div className="logo">
             <Video className="icon" />
-            <h1>VideoAI Pro</h1>
+            <h1>Logo</h1>
           </div>
           <div className="header-actions">
             <div className="search-container">

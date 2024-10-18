@@ -1,16 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import AiVideoDashboard from './Components/Dashboard'
+import { useState } from 'react'
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Login from './Components/Login'
+import SignupPage from './Components/Signup'
+import AiVideoDashboard from './Components/Dashboard';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <AiVideoDashboard/>
-    </>
+  const [user, setUser] = useState(null);
+  return (  
+    <BrowserRouter>
+      {/* <Navigation/> */}
+      <Routes>
+        <Route index element={<Login callback={setUser}/>}></Route>
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Signup" element={<SignupPage />} />
+        <Route path="/Dashboard" element={<AiVideoDashboard />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { PlayCircle, Lock, User, Mail, Key } from 'lucide-react'
+import { Link } from 'react-router-dom';
 import './Styles/Signup.css'
 
 export default function SignupPage() {
@@ -118,7 +119,7 @@ export default function SignupPage() {
         </div>
         <div className="footer-container">
           <p className="footer-text">¿Ya tienes una cuenta?</p>
-          <a href="#" className="footer-link">Inicia sesión</a>
+          <Link to="/Login" className="footer-link">Iniciar Sesión</Link>
         </div>
       </div>
       <div className="info-container">

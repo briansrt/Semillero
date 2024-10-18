@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { PlayCircle, Lock } from 'lucide-react'
+import { Link } from 'react-router-dom';
 import './Styles/Login.css'
 
 export default function LoginPage() {
@@ -13,17 +14,17 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="page-container">
-      <div className="card-container">
-        <div className="card-header">
-          <h2 className="card-header-title">VideoAI Marketing</h2>
+    <div className="login-page-container">
+      <div className="login-card-container">
+        <div className="login-card-header">
+          <h2 className="login-card-header-title">Logo</h2>
         </div>
-        <div className="card-content">
-          <h1 className="card-title">Bienvenido de nuevo</h1>
-          <p className="card-subtitle">Tus ideas, nuestros videos ultra realistas</p>
-          <form onSubmit={handleSubmit} className="form">
-            <div className="form-group">
-              <label htmlFor="email" className="form-label">Correo electrónico</label>
+        <div className="login-card-content">
+          <h1 className="login-card-title">Bienvenido de nuevo</h1>
+          <p className="login-card-subtitle">Tus ideas, nuestros videos ultra realistas</p>
+          <form onSubmit={handleSubmit} className="login-form">
+            <div className="login-form-group">
+              <label htmlFor="email" className="login-form-label">Correo electrónico</label>
               <input
                 id="email"
                 type="email"
@@ -31,11 +32,11 @@ export default function LoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="form-input"
+                className="login-form-input"
               />
             </div>
-            <div className="form-group">
-              <label htmlFor="password" className="form-label">Contraseña</label>
+            <div className="login-form-group">
+              <label htmlFor="password" className="login-form-label">Contraseña</label>
               <input
                 id="password"
                 type="password"
@@ -43,30 +44,30 @@ export default function LoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="form-input"
+                className="login-form-input"
               />
             </div>
-            <div className="checkbox-group">
+            <div className="login-checkbox-group">
               <label className="flex items-center">
-                <input type="checkbox" className="checkbox" />
-                <span className="checkbox-label">Recordarme</span>
+                <input type="checkbox" className="login-checkbox" />
+                <span className="login-checkbox-label">Recordarme</span>
               </label>
-              <a href="#" className="link">¿Olvidaste tu contraseña?</a>
+              <a href="#" className="login-link">¿Olvidaste tu contraseña?</a>
             </div>
-            <button type="submit" className="button">Iniciar sesión</button>
+            <Link to="/Dashboard" className="login-button">Iniciar sesión</Link>
           </form>
         </div>
-        <div className="card-footer">
-          <p className="footer-text">¿No tienes una cuenta?</p>
-          <a href="#" className="footer-link">Regístrate ahora</a>
+        <div className="login-card-footer">
+          <p className="login-footer-text">¿No tienes una cuenta?</p>
+          <Link to="/Signup" className="login-footer-link">Regístrate ahora</Link>
         </div>
       </div>
-      <div className="additional-info">
-        <PlayCircle className="additional-info-icon" />
-        <p className="additional-info-text">Transforma tus ideas en videos impactantes con IA</p>
+      <div className="login-additional-info">
+        <PlayCircle className="login-additional-info-icon" />
+        <p className="login-additional-info-text">Transforma tus ideas en videos impactantes con IA</p>
       </div>
-      <p className="secure-connection">
-        <Lock className="secure-icon" /> <span className="secure-text">Conexión segura</span>
+      <p className="login-secure-connection">
+        <Lock className="login-secure-icon" /> <span className="login-secure-text">Conexión segura</span>
       </p>
     </div>
   )
