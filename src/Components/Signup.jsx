@@ -30,7 +30,7 @@ export default function SignupPage() {
     <div className="login-page-container">
       <div className="form-container">
         <div className="header-container">
-          <h2 className="header-title">VideoAI Marketing</h2>
+          <h2 className="header-title">Logo</h2>
         </div>
         <div className="form-content">
           <h1 className="form-title">Crea tu cuenta</h1>
